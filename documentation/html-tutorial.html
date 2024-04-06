@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Tutorial</title>
+    <link rel="icon" type="image/x-icon" href="images\favicon.ico" />
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 200%;
+        border: 5px solid rgb(56, 10, 10);
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+
+      body {
+        background-image: url("images/bg.JPG");
+      }
+
+      table,
+      th,
+      td {
+        width: 400px;
+        height: 50px;
+        border: 1px solid black;
+        background-color: blanchedalmond;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: lightgrey">
+    <h1>LEARNING HTML</h1>
+    <p style="font-size: 150%">
+      - Today we are going to learn the basics of html
+    </p>
+    <p style="font-size: 130%">This tutorial is from W3Schools:</p>
+    <p>
+      <a href="https://www.w3schools.com/html/" target="_blank"
+        >Visit W3Schools</a
+      >
+    </p>
+    <h3>1. Images-</h3>
+    <p style="font-size: 130%">Below is an image of <i>Tulip Garden</i></p>
+    <img
+      src="images\tulip-garden.jpg"
+      alt="Tulip Garden"
+      width="500"
+      height="300"
+    />
+    <h3>2. Image maps-</h3>
+    <p>Click on the apple to go to a new page and read more about it:</p>
+
+    <img
+      src="images\apple.JPG"
+      alt="Aplle"
+      usemap="#workmap"
+      width="398"
+      height="409"
+    />
+
+    <map name="workmap">
+      <area
+        shape="circle"
+        coords="196,233,121"
+        alt="apple"
+        href="apple.htm"
+        target="_blank"
+      />
+    </map>
+
+    <h3>3. GIF -</h3>
+    <img src="images\mochi.gif" alt="mochi" />
+
+    <h3>4. Tables -</h3>
+    <table>
+      <tr>
+        <th>Person 1</th>
+        <th>Person 2</th>
+        <th>Person 3</th>
+      </tr>
+      <tr>
+        <td>Emil</td>
+        <td>Tobias</td>
+        <td>Linus</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+    </table>
+  </body>
+</html>
