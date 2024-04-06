@@ -1,33 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>HTML Tutorial</title>
     <link rel="icon" type="image/x-icon" href="images\favicon.ico" />
+    <script>
+      function weather(sw) {
+        var pic;
+        if (sw == 0) {
+          pic = "images/sun.gif";
+        } else {
+          pic = "images/rain.jpg";
+        }
+        document.getElementById("myImage").src = pic;
+      }
+    </script>
     <style>
-      h1 {
-        text-align: center;
-        font-size: 200%;
-        border: 5px solid rgb(56, 10, 10);
-        padding: 20px;
-        margin-bottom: 50px;
-      }
+                h1 {
+                  text-align: center;
+                  font-size: 200%;
+                  border: 5px solid rgb(56, 10, 10);
+                  padding: 20px;
+                  margin-bottom: 50px;
+                }
 
-      body {
-        background-image: url("images/bg.JPG");
-      }
+                body {
+                  background-image: url("images/bg.JPG");
+                }
 
-      table,
-      th,
-      td {
-        width: 400px;
-        height: 50px;
-        border: 1px solid black;
-        background-color: blanchedalmond;
-      }
+                table,
+                th,
+                td {
+                  width: 400px;
+                  height: 50px;
+                  border: 1px solid black;
+                  background-color: blanchedalmond;
+                }
+
+                .sidenav {
+            height: 100%; /* Full-height: remove this if you want "auto" height */
+            width: 160px; /* Set the width of the sidebar */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #080303; /* Black */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 20px;
+          }
+
+          /* The navigation menu links */
+          .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #a09999;
+            display: block;
+          }
+
+          /* When you mouse over the navigation links, change their color */
+          .sidenav a:hover {
+            color: #e4ebe6;
+          }
+
+          /* Style page content */
+          .main {
+            margin-left: 160px; /* Same as the width of the sidebar */
+            padding: 0px 10px;
+          }
+
+          /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+          @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+          }
+
+                /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+                @media screen and (max-width: 400px) {
+                  .sidebar a {
+                    text-align: center;
+                    float: none;
+                  }
+                } */
+
+                .main {
+      margin-left: 160px;
+    }
     </style>
   </head>
 
-  <body style="background-color: lightgrey">
+  <div class="main">
+    <body style="background-color: lightgrey">
     <h1>LEARNING HTML</h1>
     <p style="font-size: 150%">
       - Today we are going to learn the basics of html
@@ -38,7 +105,7 @@
         >Visit W3Schools</a
       >
     </p>
-    <h3>1. Images-</h3>
+    <h3 id="L1">1. Images-</h3>
     <p style="font-size: 130%">Below is an image of <i>Tulip Garden</i></p>
     <img
       src="images\tulip-garden.jpg"
@@ -46,7 +113,7 @@
       width="500"
       height="300"
     />
-    <h3>2. Image maps-</h3>
+    <h3 id="L2">2. Image maps-</h3>
     <p>Click on the apple to go to a new page and read more about it:</p>
 
     <img
@@ -67,10 +134,10 @@
       />
     </map>
 
-    <h3>3. GIF -</h3>
+    <h3 id="L3">3. GIF -</h3>
     <img src="images\mochi.gif" alt="mochi" />
 
-    <h3>4. Tables -</h3>
+    <h3 id="L4">4. Tables -</h3>
     <table>
       <tr>
         <th>Person 1</th>
@@ -88,5 +155,53 @@
         <td>10</td>
       </tr>
     </table>
+
+    <h3 id="L5">5. Iframe-</h3>
+
+    <iframe
+      src="html-tutorial.html"
+      style="border: 2px solid rgb(4, 0, 255); width: 700px; height: 400px;"
+      title="Iframe Example"
+    ></iframe>
+
+    <h3 id="L6">6. Html Javascript-</h3>
+
+    <img id="myImage" src="images\rain.jpg" width="250" height="200" />
+
+    <p>
+      <button type="button" onclick="weather(1)">Rain</button>
+      <button type="button" onclick="weather(0)">Sunshine</button>
+    </p>
+
+    <h3 id="L7">7. Emojis-</h3>
+
+    <p style="font-size: 45px">&#128516; &#128640; &#128030; &#x1F4BB;</p>
+
+    <h3 id="L8">8. Forms-</h3>
+
+    <p>Choose your favorite Web language:</p>
+
+    <form style="padding-bottom: 50px;">
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    </form>
+
+    </div>
+
+    <div class="sidenav">
+      <h2 style="color: #a09999;">Bookmarks:</h2>
+      <a href="#L1">Images</a>
+      <a href="#L2">Image Map</a>
+      <a href="#L3">GIF</a>
+      <a href="#L4">Table</a>
+      <a href="#L5">Iframe</a>
+      <a href="#L6">Html Javascript</a>
+      <a href="#L7">Emojis</a>
+      <a href="#L8">Forms</a>
+    </div>
   </body>
 </html>
