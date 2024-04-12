@@ -1,36 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel</title>
-    <style>
-      body {
-        background-image: url("images/resort.JPG");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-            }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Travels</title>
+  <link rel="icon" type="image/x-icon" href="images/travel-favicon.ico" />
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar" class="navbar">
+      <a href="javascript:home">Home</a>
+      <a href="javascript:news">About</a>
+      <a href="javascript:contact">Destination</a>
+      <a href="javascript:about">Hotels & Restaurants</a>
+      <a href="javascript:contact">Blog</a>
+      <a href="javascript:contact">Contact</a>
+      <a href="javascript:contact">Book now</a>
+    </div>
+  <script>
+  window.onscroll = function() {myFunction()};
+  
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+ 
+    
+  <div class="container">
+    <img src="images\resort.JPG" alt="resort">
+    <div class="title">LUXURY TRAVELS</div>
+    <div class="header"><h1>Explore the World in Comfort</h1></div>
+    <div class="phrase"><h2>You dream it, we plan  it!</h2></div>
+    <div class="box">
+      <h1>Book now:</h1>
+        <label for="destination">Destination:</label><br>
+        <input type="text" id="destination" name="destination"><br>
+        <label for="check-in">Check-in date:</label><br>
+        <input type="date" id="check-in" name="check-in"><br>
+        <label for="check-out">Check-out date:</label><br>
+        <input type="date" id="check-out" name="check-out"><br>
+        <div class="dropdown">
+          <button class="dropbtn">Price limit</button>
+          <div class="dropdown-content">
+          <a href="#">$500</a>
+          <a href="#">$1000</a>
+          <a href="#">$2000</a><br>
+        </div>
+        <div class="search">
+        <button type="submit" class="search" style="background-color: rgb(36, 48, 117);">Search</button><br>
+        </div>
+      </div>
+  </div>
+    <div class="next">
+      <h1 style="padding-top: 50px;">Best Places to Visit:</h1>
+      <h3 style="text-align: center; padding: 20px;">Exploring places, creating memories...</h3>
+      <img style="height: 400px; width: 200px;" src="images\swiss-1.png" alt="swiss">
+      <img style="height: 400px; width: 200px;" src="images\japan-1.png" alt="japan">
+      <img style="height: 400px; width: 200px;" src="images\london-1.png" alt="london">
+      <img style="height: 400px; width: 200px;" src="images\paris-1.png" alt="paris">
+      <ul>
+        <li><h2 style="left:210px;">Switzerland</h2></li>
+        <li><h2 style="left:640px;">Japan</h2></li>
+        <li><h2 style="left:1050px;">London</h2></li>
+        <li><h2 style="left:1470px;">Paris</h2></li>
+      </ul>
+      <ul>
+        <li><p style="left:210px;">Experience the stunning landscapes of this beautiful country where tradition and modernity come together in perfect harmony.</p></li>
+        <li><p style="left:640px;">A country known for its rich culture, fascinating history, breathtaking landscapes, and unique cuisine. A place like no other, it might be just the vacation you need!</p></li>
+        <li><p style="left:1050px;">With stunning architecture, gorgeous gardens, magnificent towers, busy streets, many shops, and some iconic sites, London is everything dreamy.</p></li>
+        <li><p style="left:1470px;">From iconic bucket list attractions like the Eiffel Tower to picture-perfect pleasures like a picnic on the bank of the Seine River, Paris offers something for everyone.</p></li><br>
+      </ul>
+    </div>
+    <section id="pricing" class="pricing">
 
-      h1 {
-        text-align: center;
-        text-align-last: center;
-        vertical-align: center;
-      }
-      #myVideo {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- <video autoplay muted loop id="myVideo">
-        <source src="images/video.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video> -->
-    <h1>Exploring destinations, creating memories</h1>
-  </body>
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h1>Pricing</h1>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Basic Plan</h3>
+              <div class="icon">
+                <i class="bi bi-box"></i>
+              </div>
+              <h4><sup>$</sup>500</h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Air Ticket, Visa and Documents</span></li>
+                <li><i class="bi bi-check"></i> <span>Hotels and Transportation</span></li>
+                <li><i class="bi bi-check"></i> <span>Meals included</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Sightseeing and Tour guide</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Special luxury services</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>Bestseller Plan</h3>
+              <div class="icon">
+                <i class="bi bi-rocket"></i>
+              </div>
+
+              <h4><sup>$</sup>1000</h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Air Ticket, Visa and Documents</span></li>
+                <li><i class="bi bi-check"></i> <span>Hotels and Transportation</span></li>
+                <li><i class="bi bi-check"></i> <span>Meals included</span></li>
+                <li><i class="bi bi-check"></i></i> <span>Sightseeing and Tour guide</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Special luxury services</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Luxury Plan</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4><sup>$</sup>2000</h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Air Ticket, Visa and Documents</span></li>
+                <li><i class="bi bi-check"></i> <span>Hotels and Transportation</span></li>
+                <li><i class="bi bi-check"></i> <span>Meals included</span></li>
+                <li><i class="bi bi-check"></i></i> <span>Sightseeing and Tour guide</span></li>
+                <li><i class="bi bi-check"></i> <span>Special luxury services</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>
+      <div class="footer"></div>
+        <footer id="footer" class="footer">
+  
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Green Lane, Shalimar</p>
+            <p>Srinagar, J&K 190025</p>
+            <p>India</p>
+            <p class="mt-4"><strong>Phone:</strong> <span>+91 8355 216 402</span></p>
+            <p><strong>Email:</strong> <span>luxurytravels@email.com</span></p>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="copyright">
+        <ul>
+        <li><p>&copy; <span>Copyright</span> <strong class="px-1">Luxury Travels</strong><br>
+        <span>All Rights Reserved</span></p></li>
+        </ul>
+      </div>
+
+      
+</body>
 </html>
